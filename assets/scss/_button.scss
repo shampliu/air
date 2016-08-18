@@ -1,0 +1,117 @@
+$color : #ecf0f1;
+$transition: .3s;// increase this to see the transformations happen in slow motion
+
+$button-size : 2rem; 
+//common to all three-liners
+
+.lines-button-container {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 9001;
+
+  .lines-button {
+    padding: $button-size/2 $button-size/4;
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+    border-radius: $button-size/7;
+  /* */
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      transition: 0;
+    }
+  }
+  //common to all three-liners
+  @mixin line {
+    display: inline-block;
+    width: $button-size;
+    height: $button-size/10;
+    // border-radius: $button-size/14; 
+    transition: $transition;
+  }
+  //common to all three-liners
+  .lines {
+    @include line;
+    background: black;
+    position: relative; 
+
+    &:before, &:after {
+      @include line;
+      background: black;
+      position: absolute;
+      left:0;
+      content: '';
+      -webkit-transform-origin: $button-size/14 center;
+              transform-origin: $button-size/14 center;
+    }
+    &:before { 
+      top: $button-size/4; 
+    }
+    &:after { 
+      top: -$button-size/4; 
+    }
+  }
+
+  //common to all three-liners
+  .lines-button:hover {
+    .lines {
+      &:before { 
+        top: $button-size/3.5; 
+      }
+      &:after { 
+        top: -$button-size/3.5; 
+      }
+    }
+  }
+  .lines-button.close {
+    -webkit-transform: scale3d(.8,.8,.8);
+            transform: scale3d(.8,.8,.8);
+
+    .lines {
+      &:before, &:after {
+        background: $color;
+      }
+
+    }
+  }
+
+  //three-lines to x method 2
+  .lines-button.x2{
+      .lines{
+        transition: background .3s .5s ease;
+
+        &:before, &:after{
+          //set transform origin
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+          transition: top .3s .6s ease, -webkit-transform .3s ease;
+          transition: top .3s .6s ease, transform .3s ease;
+        }
+      }
+  }
+
+  .lines-button.x2.close{
+    .lines {
+      transition: background .3s 0s ease;
+      background: transparent;
+
+      &:before, &:after{
+        transition: top .3s ease, -webkit-transform .3s .5s ease;//delay the formation of the x till the minus is formed  
+        transition: top .3s ease, transform .3s .5s ease;//delay the formation of the x till the minus is formed  
+        top:0;
+        width: $button-size;
+      }
+      &:before{
+        -webkit-transform: rotate3d(0,0,1,45deg); 
+                transform: rotate3d(0,0,1,45deg); 
+      }
+      &:after{
+        -webkit-transform: rotate3d(0,0,1,-45deg); 
+                transform: rotate3d(0,0,1,-45deg); 
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<div class="logo"><a href="">LOGO</a></div>
+
+<div class="lines-button-container">
+  <button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x2">
+    <span class="lines"></span>
+  </button>
+</div>
+
+<div class="main-menu">
+  <div class="inner">
+    <div class="menu-content">
+      <h2>Menu</h2>
+      {{!-- <a href="#" class="nav-close">
+        <span class="hidden">Close</span>
+      </a> --}}
+      <h3>Navigation</h3>
+      <ul>
+        {{#foreach navigation}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+        {{#if @labs.subscribers}}
+        <li><a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a></li>
+        {{else}}
+        <li><a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a></li>
+        {{/if}}
+      </ul>
+      
+      <h3>Tags</h3>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="http://500px.com/shampliu">500px</a></li>
+        <li><a href="http://flickr.com/photos/spaceabstract">Flickr</a></li>
+        <li><a href="http://instagram.com/shampliu">Instagram</a></li>
+        <li><a href="http://github.com/shampliu">Github</a></li>
+        <li><a href="http://linkedin.com/in/changliu95">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
