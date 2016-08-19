@@ -5,9 +5,9 @@ $button-size : 2rem;
 //common to all three-liners
 
 .lines-button-container {
-  position: absolute;
-  right: 30px;
-  top: 30px;
+  position: fixed;
+  right: 25px;
+  top: 25px;
   z-index: 9001;
 
   .lines-button {
