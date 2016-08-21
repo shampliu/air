@@ -1,13 +1,13 @@
 $color : #ecf0f1;
-$transition: .3s;// increase this to see the transformations happen in slow motion
+$transition: .2s;// increase this to see the transformations happen in slow motion
 
 $button-size : 2rem; 
 //common to all three-liners
 
 .lines-button-container {
   position: fixed;
-  right: 25px;
-  top: 25px;
+  right: 40px;
+  top: 40px;
   z-index: 9001;
 
   .lines-button {

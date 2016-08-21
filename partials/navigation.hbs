@@ -1,4 +1,4 @@
-<div class="logo"><a href="/blog">changliu</a></div>
+{{#if @blog.logo}}<div class="logo"><a href="/blog"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></div>{{/if}}
 
 <div class="lines-button-container">
   <button type="button" role="button" aria-label="Toggle Navigation" class="lines-button x2">
@@ -27,10 +27,10 @@
       
       <h3>Tags</h3>
       <ul>
-        <li>#photo</li>
-        <li>#code</li>
-        <li>#travel</li>
-        <li>#company-tours</li>
+        <li><a href="">#photo</a></li>
+        <li><a href="">#code</a></li>
+        <li><a href="">#travel</a></li>
+        <li><a href="">#company-tours</a></li>
       </ul>
       <h3>Elsewhere</h3>
       <ul>
@@ -42,4 +42,5 @@
       </ul>
     </div>
   </div>
+  <div class="menu-back"></div>
 </div>
