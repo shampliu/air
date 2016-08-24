@@ -195,6 +195,10 @@ article {
 	letter-spacing: 0.2px;
 	line-height: 30px;
 	font-family: $secondary-font, 'Georgia', serif;
+
+	img {
+		width: 100%;
+	}
 }
 
 // pagination
