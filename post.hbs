@@ -103,13 +103,16 @@ the {{{body}}} of the default.hbs template, containing the blog header/footer. -
     {{/prev_post}}
   </aside>
   <div style="clear: both; margin-bottom: 4rem;"></div>
+  <div id="disqus_thread"></div>
+  <div style="margin-bottom: 4rem;"></div>
+
 </main>
 
 
 
-{{/post}}
 
-<div id="disqus_thread"></div>
+
+{{/post}}
 <script type="text/javascript">
     var disqus_shortname = 'changliu'; 
     var disqus_identifier = '{{post.id}}';
