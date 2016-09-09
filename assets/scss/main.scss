@@ -91,8 +91,13 @@ div.main-menu {
 		color: white;
 
 		div.menu-content {
+			font-size: 21px;
 			a {
 				color: white;
+				@include vendorize(transition, color 350ms ease-in-out);
+				&:hover{
+					color: $accent-color;
+				}
 			}
 			ul {
 				padding-left: 0;
@@ -130,7 +135,7 @@ button{
 }
 
 article {
-	border-bottom: 1px solid $tertiary-color;
+	border-bottom: 1px solid rgba(158, 171, 179, 0.2);
 
 	// &:nth-child(1) {
 	// 	margin-top: 120px;
@@ -162,6 +167,8 @@ article {
 .post-header {
 	.post-title {
 		color: $accent-color;
+		margin-bottom: 0.25em;
+		font-size: 35px;
 		span {
 			color: $tertiary-color;
 		}
@@ -172,7 +179,9 @@ article {
 }
 
 .post-meta {
+	margin-bottom: 4rem;
 	.post-meta-span {
+		font-size: 21px;
 		color: $tertiary-color;
 		a {
 			color: $tertiary-color;
@@ -191,10 +200,12 @@ article {
 }
 
 .post-content {
-	font-size: 19px;
-	letter-spacing: 0.2px;
-	line-height: 30px;
-	font-family: $secondary-font, 'Georgia', serif;
+	font-size: 21px;
+	letter-spacing: -.003em;
+	word-wrap: break-word;
+	font-weight: 400;
+	line-height: 1.58;
+	font-family: $secondary-font, serif;
 
 	img {
 		width: 100%;

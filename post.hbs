@@ -13,7 +13,6 @@ the {{{body}}} of the default.hbs template, containing the blog header/footer. -
 
     <header class="post-header">
       <h1 class="post-title">{{#formatTitle title}}{{/formatTitle}}</h1>
-      <p>{{meta_description}}</p>
       <section class="post-meta">
         <span class="post-meta-span">{{tags}} / <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="MM.DD.YYYY"}}</time></span>
       </section>
@@ -87,8 +86,8 @@ the {{{body}}} of the default.hbs template, containing the blog header/footer. -
     <a class="next" href="{{url}}">
       <section class="post">
         <h3>next</h3>
-        <p>{{title}}</p>
-        <p>{{meta_description}}</p>
+        <p>{{#formatTitle title}}{{/formatTitle}}</p>
+        {{!-- <p>{{meta_description}}</p> --}}
       </section>
     </a>
     {{/next_post}}
@@ -96,8 +95,8 @@ the {{{body}}} of the default.hbs template, containing the blog header/footer. -
     <a class="prev" href="{{url}}">
       <section class="post">
         <h3>previous</h3>
-        <p>{{title}}</p>
-        <p>{{meta_description}}</p>
+        <p>{{#formatTitle title}}{{/formatTitle}}</p>
+        <!-- <p>{{meta_description}}</p> -->
       </section>
     </a>
     {{/prev_post}}
