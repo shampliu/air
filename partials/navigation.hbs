@@ -10,9 +10,6 @@
   <div class="inner">
     <div class="menu-content">
       <h2>Menu</h2>
-      {{!-- <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-      </a> --}}
       <ul>
         {{#foreach navigation}}
         <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
@@ -23,21 +20,20 @@
         <li><a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a></li>
         {{/if}}
       </ul>
-      
+
       <h3>Tags</h3>
       <ul>
-        <li><a href="">#photo</a></li>
-        <li><a href="">#code</a></li>
-        <li><a href="">#travel</a></li>
-        <li><a href="">#company-tours</a></li>
+        <!-- <li><a href="/tag/photo">#photo</a></li>
+        <li><a href="/tag/code">#code</a></li>
+        <li><a href="/tag/travel">#travel</a></li> -->
       </ul>
       <h3>Elsewhere</h3>
       <ul>
-        <li><a href="http://500px.com/shampliu">500px</a></li>
+        <!-- <li><a href="http://500px.com/shampliu">500px</a></li>
         <li><a href="http://flickr.com/photos/spaceabstract">Flickr</a></li>
         <li><a href="http://instagram.com/shampliu">Instagram</a></li>
         <li><a href="http://github.com/shampliu">Github</a></li>
-        <li><a href="http://linkedin.com/in/changliu95">LinkedIn</a></li>
+        <li><a href="http://linkedin.com/in/changliu95">LinkedIn</a></li> -->
       </ul>
     </div>
   </div>

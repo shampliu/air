@@ -1,0 +1,28 @@
+{
+  "name": "air",
+  "version": "1.0.0",
+  "description": "Ghost blogging theme based on Airbnb's Design blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shampliu/air.git"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "airbnb",
+    "design",
+    "handlebars",
+    "template",
+    "blog"
+  ],
+  "author": "Chang Liu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shampliu/air/issues"
+  },
+  "homepage": "https://github.com/shampliu/air#readme"
+}
